@@ -13,6 +13,6 @@ const getLocationWeather = async (location) => {
       },
     }
   );
-  return response.data.current.temp_f;
+  return response.data.current;
 };
 export default getLocationWeather;

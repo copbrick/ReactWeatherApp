@@ -2,11 +2,12 @@ import "./SearchBar.css";
 
 import { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ onSubmit }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    return await onSubmit(searchTerm);
   };
 
   const handleChange = (e) => {
